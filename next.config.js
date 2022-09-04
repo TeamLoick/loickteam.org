@@ -5,13 +5,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/discord",
-        destination: "https://discord.gg/dG4atM8XsP",
-        permanent: true,
-      },
-      {
-        source: "/",
-        destination: "/discord",
+        source: '/discord',
+        destination: 'https://discord.gg/dG4atM8XsP',
         permanent: true,
       },
     ];

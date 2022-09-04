@@ -1,26 +1,62 @@
-html,
+@use 'vars' as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
 body {
+  font-family: 'Poppins', sans-serif;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: $grey_300;
+  min-height: 100vh;
+  height: fit-content;
+  color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  width: fit-content
 }
 
 a {
   color: inherit;
   text-decoration: none;
+
+  &.link {
+    color: rgba($red, .5);
+
+    &:hover {
+      text-decoration: underline;
+      color: $red;
+    }
+  }
 }
 
-* {
-  box-sizing: border-box;
+// Scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($red, .75);
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: $border-radius-1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $red;
 }
