@@ -1,1 +1,0 @@
-# loickteam.org
