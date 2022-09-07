@@ -21,9 +21,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-          cd loickteam.org
-          git pull
-          pnpm install --frozen-lockfile
-          pnpm run build
-          pm2 reload loickteam.org-autodeploy
-
+            cd loickteam.org
+            git pull
+            pnpm install --frozen-lockfile
+            pnpm run build
+            pm2 reload loickteam.org-autodeploy
