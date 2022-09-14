@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd loickteam.org
+            cd github && loickteam.org
             git pull
             pnpm install --frozen-lockfile
             pnpm run build
