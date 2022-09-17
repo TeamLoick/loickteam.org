@@ -25,4 +25,4 @@ jobs:
             git pull
             pnpm install --frozen-lockfile
             pnpm run build
-            pm2 reload loickteam.org-autodeploy
+            pm2 reload loickteam.org
