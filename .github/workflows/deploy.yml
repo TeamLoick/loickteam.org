@@ -23,6 +23,6 @@ jobs:
           script: |
             cd github/loickteam.org
             git pull
-            pnpm install --frozen-lockfile
-            pnpm run build
+            npm install --frozen-lockfile
+            npm run build
             pm2 reload loickteam.org
