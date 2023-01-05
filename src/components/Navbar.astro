@@ -1,0 +1,29 @@
+---
+import { Image } from '@astrojs/image/components';
+
+export interface Props {
+
+}
+
+---
+<nav class="select-none border-b border-loick-red w-full flex flex-row justify-between items-center px-4">
+    <div class="cursor-pointer flex flex-row items-center gap-1">
+        <Image src={import("../../public/lg.png")}alt="loick team logo" width={50} height={50} draggable="false"  />
+        LoickTeam
+    </div>
+    <ul class="list-none flex flex-row items-center gap-12 text-lg">
+        <li class="transition duration-300 hover:text-loick-red">
+            <a href="/">Home</a>
+        </li>
+        <li class="transition duration-300 hover:text-loick-red">
+            <a href="#projects">Projects</a>
+        </li>
+        <li class="transition duration-300 hover:text-loick-red">
+            <a href="#members">Members</a>
+        </li>
+    </ul>
+    <div class="flex flex-row items-center gap-4">
+        <button class="px-6 py-1 rounded bg-loick-red/[.75] text-loick-light_grey w-fit h-fit transition duration-300 hover:bg-loick-red hover:text-loick-white">Sign in</button>
+        <button class="px-6 py-1 rounded bg-loick-grey/[.75] text-loick-light_grey w-fit h-fit transition duration-300 hover:bg-loick-grey hover:text-loick-white">Sign up</button>
+    </div>
+</nav>

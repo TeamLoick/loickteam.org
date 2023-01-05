@@ -1,0 +1,54 @@
+---
+export interface Props {
+	title: string;
+}
+import Navbar from '../components/Navbar.astro';
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/lg.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script src="https://kit.fontawesome.com/05bb22a118.js" crossorigin="anonymous" async defer></script>
+	</head>
+	<body class="bg-loick-black text-loick-white min-h-[100vh] w-full overflow-x-hidden overflow-y-auto">
+		<Navbar />
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+		/* width */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #171717;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #942D40;
+		border-radius: 0.25rem;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #942D40;
+	}
+</style>
